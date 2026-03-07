@@ -1,0 +1,38 @@
+{
+  "trips": {
+    "rows_loaded": 220,
+    "duplicates_dropped": 0,
+    "nulls_found": 0,
+    "outliers_clipped": 0
+  },
+  "drivers": {
+    "rows_loaded": 210,
+    "duplicates_dropped": 0,
+    "nulls_found": 0,
+    "outliers_clipped": 0
+  },
+  "accel": {
+    "rows_loaded": 243,
+    "duplicates_dropped": 0,
+    "nulls_found": 0,
+    "outliers_clipped": 6
+  },
+  "audio": {
+    "rows_loaded": 248,
+    "duplicates_dropped": 1,
+    "nulls_found": 0,
+    "outliers_clipped": 0
+  },
+  "earnings": {
+    "rows_loaded": 221,
+    "duplicates_dropped": 0,
+    "nulls_found": 0,
+    "outliers_clipped": 0
+  },
+  "goals": {
+    "rows_loaded": 210,
+    "duplicates_dropped": 0,
+    "nulls_found": 0,
+    "outliers_clipped": 0
+  }
+}
