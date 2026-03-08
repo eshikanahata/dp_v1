@@ -251,6 +251,7 @@ driver_goals    = drv_goals
 
 current_earnings = 0.0; pace_now = 0.0; goal_amount = 0.0; remaining_hours = 0.0
 gap_to_goal = 0.0; required_pace = 0.0; goal_status = "On Track"; pace_trend = ""
+projected_end = 0.0; estimated_finish_hours = None
 
 if not driver_earnings.empty:
     if "cumulative_earnings" in driver_earnings.columns:
@@ -267,6 +268,8 @@ if not driver_goals.empty:
     gap_to_goal = max(0, goal_amount - current_earnings)
     required_pace = gap_to_goal / remaining_hours if remaining_hours > 0 else 0.0
     projected = current_earnings + (pace_now * remaining_hours)
+    projected_end = projected
+    estimated_finish_hours = round(gap_to_goal / pace_now, 2) if pace_now > 0 else None
     if projected >= goal_amount * 0.95:
         goal_status = "On Track"
     elif projected >= goal_amount * 0.80:
@@ -303,6 +306,14 @@ with tab1:
         st.markdown(_metric("Goal", f"₹{goal_amount:,.0f}", sub=f"₹{gap_to_goal:,.0f} remaining"), unsafe_allow_html=True)
     with c4:
         st.markdown(_metric("Time left", f"{remaining_hours:.1f}h"), unsafe_allow_html=True)
+
+    p1, p2 = st.columns(2, gap="medium")
+    with p1:
+        st.markdown(_metric("Projected earnings", f"₹{projected_end:,.0f}", sub=f"at current pace of ₹{pace_now:,.0f}/hr"), unsafe_allow_html=True)
+    with p2:
+        ef_str = f"{estimated_finish_hours:.1f}h" if estimated_finish_hours is not None else "—"
+        ef_sub = "to reach goal at current pace" if estimated_finish_hours is not None else "earning pace unavailable"
+        st.markdown(_metric("Est. finish", ef_str, sub=ef_sub), unsafe_allow_html=True)
 
     # Status bar
     sc = status_color.get(goal_status, GREEN)
@@ -438,9 +449,9 @@ with tab2:
 
 # === TAB 3 — DETAIL =======================================================
 with tab3:
-    all_trip_ids = sorted(moments_df["trip_id"].unique().tolist()) if "trip_id" in moments_df.columns else []
-    if not all_trip_ids and "trip_id" in summaries_df.columns:
-        all_trip_ids = sorted(summaries_df["trip_id"].unique().tolist())
+    drv_moment_trips = sorted(driver_moments["trip_id"].unique().tolist()) if "trip_id" in driver_moments.columns and not driver_moments.empty else []
+    drv_summary_trips = sorted(driver_summaries["trip_id"].unique().tolist()) if "trip_id" in driver_summaries.columns and not driver_summaries.empty else []
+    all_trip_ids = sorted(set(drv_moment_trips + drv_summary_trips))
 
     if not all_trip_ids:
         st.markdown(f'<div style="color:{LIGHT_GRAY}; padding:40px; text-align:center;">No trips available.</div>', unsafe_allow_html=True)

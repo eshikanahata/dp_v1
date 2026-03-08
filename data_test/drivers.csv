@@ -1,0 +1,5 @@
+DRIVER_ID,Driver_name, city,Vehicle Type,License Plate,join_date
+DTEST01,Priya Sharma,Mumbai,sedan,MH01AB1234,2023-01-15
+DTEST02,Rahul Verma,Delhi,hatchback,DL02CD5678,2022-06-20
+DTEST03,Ananya Iyer,Bangalore,suv,KA03EF9012,2023-08-01
+DTEST04,Mohammed Khan,Hyderabad,sedan,TS04GH3456,2024-01-10

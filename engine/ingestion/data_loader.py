@@ -99,11 +99,9 @@ class DataLoader:
             nulls_found = 0
             for col in TIMESTAMP_COLS.get(key, []):
                 if col in df.columns:
-                    df[col] = pd.to_datetime(df[col], errors="coerce")
+                    # First pass: coerce to datetime (may produce mixed tz)
+                    df[col] = pd.to_datetime(df[col], errors="coerce", utc=True)
                     nulls_found += int(df[col].isna().sum())
-                    # Convert timezone-naive to UTC
-                    if df[col].dt.tz is None:
-                        df[col] = df[col].dt.tz_localize("UTC", ambiguous="NaT", nonexistent="NaT")
 
             # --- Deduplicate ---
             dups_dropped = 0

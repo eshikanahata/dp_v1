@@ -18,8 +18,11 @@ import logging
 from datetime import datetime
 from typing import List, Dict
 
+import pandas as pd
+
 from engine.ingestion.data_loader import DataLoader
 from engine.ingestion.trip_mapper import TripMapper
+from engine.detection.base_detector import BaseDetector
 from engine.detection.motion_detector import MotionDetector
 from engine.detection.audio_detector import AudioDetector
 from engine.fusion.fusion_engine import FusionEngine
@@ -71,10 +74,10 @@ def build_trip_summaries(
         trip_id = row.get("trip_id", "")
         driver_id = row.get("driver_id", "UNKNOWN")
         date_val = row.get("date", "")
-        if hasattr(date_val, "strftime"):
+        if hasattr(date_val, "strftime") and not pd.isna(date_val):
             date_str = date_val.strftime("%Y-%m-%d")
         else:
-            date_str = str(date_val)
+            date_str = str(date_val) if not pd.isna(date_val) else ""
 
         duration_min = float(row.get("duration_min", 0))
         distance_km = float(row.get("distance_km", 0))
@@ -225,4 +228,9 @@ def run_pipeline(data_dir: str = "data/", output_dir: str = "outputs/"):
 
 
 if __name__ == "__main__":
-    run_pipeline()
+    import argparse
+    parser = argparse.ArgumentParser(description="Driver Pulse pipeline")
+    parser.add_argument("--data-dir", default="data/", help="Input data directory")
+    parser.add_argument("--output-dir", default="outputs/", help="Output directory")
+    args = parser.parse_args()
+    run_pipeline(data_dir=args.data_dir, output_dir=args.output_dir)

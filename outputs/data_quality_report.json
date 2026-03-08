@@ -1,38 +1,38 @@
 {
   "trips": {
-    "rows_loaded": 220,
+    "rows_loaded": 13,
     "duplicates_dropped": 0,
-    "nulls_found": 0,
+    "nulls_found": 9,
     "outliers_clipped": 0
   },
   "drivers": {
-    "rows_loaded": 210,
+    "rows_loaded": 4,
     "duplicates_dropped": 0,
     "nulls_found": 0,
     "outliers_clipped": 0
   },
   "accel": {
-    "rows_loaded": 243,
-    "duplicates_dropped": 0,
-    "nulls_found": 0,
-    "outliers_clipped": 6
+    "rows_loaded": 10826,
+    "duplicates_dropped": 8920,
+    "nulls_found": 8931,
+    "outliers_clipped": 57
   },
   "audio": {
-    "rows_loaded": 248,
-    "duplicates_dropped": 1,
-    "nulls_found": 0,
+    "rows_loaded": 21676,
+    "duplicates_dropped": 7054,
+    "nulls_found": 3523,
     "outliers_clipped": 0
   },
   "earnings": {
-    "rows_loaded": 221,
+    "rows_loaded": 26,
     "duplicates_dropped": 0,
-    "nulls_found": 0,
+    "nulls_found": 26,
     "outliers_clipped": 0
   },
   "goals": {
-    "rows_loaded": 210,
+    "rows_loaded": 4,
     "duplicates_dropped": 0,
-    "nulls_found": 0,
+    "nulls_found": 1,
     "outliers_clipped": 0
   }
 }
