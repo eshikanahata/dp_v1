@@ -9,7 +9,7 @@
 
 ## 🔗 Links
 
-- **Live Demo**: [Deploy URL — add after Streamlit Cloud deployment]
+- **Live Demo**: [Link](https://uber-she-team8-v1.streamlit.app/)
 - **Demo Video**: [Video URL — add after recording]
 
 ---
