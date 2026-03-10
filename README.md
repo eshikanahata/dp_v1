@@ -55,7 +55,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 driverpulse/
