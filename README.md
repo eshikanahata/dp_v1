@@ -1,4 +1,4 @@
-# 🚗 Driver Pulse — Driver Assistance Analytics
+#  Driver Pulse — Driver Assistance Analytics
 
 > **Real-time safety & earnings intelligence for Uber drivers.**  
 > Rule-based. Deterministic. Explainable. No ML.
@@ -7,14 +7,14 @@
 
 ---
 
-## 🔗 Links
+##  Links
 
 - **Live Demo**: [Link](https://uber-she-team8-v1.streamlit.app/)
 - **Demo Video**: [Video URL — add after recording]
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Install dependencies
 
@@ -55,7 +55,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 driverpulse/
@@ -86,7 +86,7 @@ driverpulse/
 
 ---
 
-## ⚖️ Design Decisions & Trade-offs
+## Design Decisions & Trade-offs
 
 1. **Rule-based over ML**: All thresholds are explicit constants — fully explainable and auditable
 2. **Fairness filters**: Events near trip boundaries get reduced confidence to avoid penalizing drivers for traffic conditions outside their control
@@ -96,14 +96,14 @@ driverpulse/
 
 ---
 
-## 📋 Data Contract Rules
+## Data Contract Rules
 
 > **These rules are enforced across all schema versions:**
 
-- ❌ **Never Remove** a field from StressMoment or TripSummary
-- ❌ **Never Rename** an existing field
-- ✅ **Only Append** new fields with default values
-- ✅ All outputs include `schema_version`, `system_version`, `generated_at`
+-  **Never Remove** a field from StressMoment or TripSummary
+-  **Never Rename** an existing field
+- **Only Append** new fields with default values
+- All outputs include `schema_version`, `system_version`, `generated_at`
 
 ---
 
