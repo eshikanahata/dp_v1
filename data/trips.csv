@@ -1,0 +1,13 @@
+trip_id,driver_id,date,start_time,end_time,duration_min,distance_km,fare,surge_multiplier,pickup_location,dropoff_location,trip_status
+TRIP003,DRV003,2024-02-06,07:52:00,08:15:00,23,9.8,175,1.0,Worli,Bandra,completed
+TRIP040,DRV007,2024-02-06,10:40:00,10:11:00,31,10.5,179,1.4,Indiranagar,Kharadi,completed
+TRIP043,DRV007,2024-02-06,13:01:00,13:19:00,18,15.5,404,1.5,Hinjewadi,South Delhi,completed
+TRIP048,DRV001,2024-02-06,06:36:00,06:14:00,38,10.4,351,1.2,Indiranagar,Hitec City,completed
+TRIP049,DRV002,2024-02-06,07:43:00,07:06:00,23,11.1,447,1.1,Malad,Worli,completed
+TRIP090,DRV003,2024-02-06,12:30:00,12:00:00,30,16.2,336,1.4,HSR Layout,Banjara Hills,completed
+TRIP099,DRV004,2024-02-06,09:33:00,09:59:00,26,14.2,363,1.5,Koramangala,HSR Layout,completed
+TRIP109,DRV003,2024-02-06,07:43:00,07:11:00,28,9.8,181,1.3,Colaba,Secunderabad,completed
+TRIP121,DRV004,2024-02-06,07:07:00,07:26:00,19,14.2,377,1.4,Hitec City,Secunderabad,completed
+TRIP151,DRV001,2024-02-06,13:37:00,13:15:00,38,16.8,381,1.5,Powai,Banjara Hills,completed
+TRIP153,DRV001,2024-02-06,15:51:00,15:15:00,24,9.9,391,1.1,Connaught Place,South Delhi,completed
+TRIP172,DRV007,2024-02-06,10:04:00,10:38:00,34,19.7,354,1.2,Secunderabad,Colaba,completed
