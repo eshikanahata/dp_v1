@@ -86,7 +86,7 @@ driverpulse/
 
 ---
 
-## ⚖️ Design Decisions & Trade-offs
+## Design Decisions & Trade-offs
 
 1. **Rule-based over ML**: All thresholds are explicit constants — fully explainable and auditable
 2. **Fairness filters**: Events near trip boundaries get reduced confidence to avoid penalizing drivers for traffic conditions outside their control
@@ -96,7 +96,7 @@ driverpulse/
 
 ---
 
-## 📋 Data Contract Rules
+## Data Contract Rules
 
 > **These rules are enforced across all schema versions:**
 
