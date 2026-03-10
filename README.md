@@ -3,7 +3,7 @@
 > **Real-time safety & earnings intelligence for Uber drivers.**  
 > Rule-based. Deterministic. Explainable. No ML.
 
-**Built by Eshika & Hrishita — Uber She++ Hackathon**
+**Built by Eshika, Hrishita & Ravi — Uber She++ Hackathon**
 
 ---
 
