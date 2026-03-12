@@ -9,8 +9,8 @@
 
 ##  Links
 
-- **Live Demo**: [Link](https://uber-she-team8-v1.streamlit.app/)
-- **Demo Video**: [Video URL — add after recording]
+- **Live Demo**: [Link](https://driverpulse-n2io.vercel.app/)
+- **Demo Video**: [Video](https://drive.google.com/file/d/1N5GUHxZB1ETf8qi6qS3Z2T0y6Ii4_2lL/view?usp=sharing)
 
 ---
 
