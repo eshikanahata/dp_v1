@@ -41,7 +41,8 @@ app.include_router(analytics.router, prefix=API_PREFIX)
 app.include_router(upload.router, prefix=API_PREFIX)
 
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
+@app.head("/", include_in_schema=False)
 def root():
     return {
         "app": "DriverPulse API",
@@ -52,6 +53,7 @@ def root():
     }
 
 @app.get("/api/v1")
+@app.head("/api/v1")
 def api_root():
     return {
         "message": "DriverPulse API v1 is running",
@@ -59,5 +61,6 @@ def api_root():
     }
 
 @app.get("/health")
+@app.head("/health")
 def health():
     return {"status": "ok", "version": "2.0.0"}
