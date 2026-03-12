@@ -62,7 +62,7 @@ export function CSVUploadPanel({ onSuccess }: CSVUploadPanelProps) {
       const form = new FormData();
       files.forEach((f) => form.append("files", f));
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1"}/upload`,
+        `${process.env.NEXT_PUBLIC_API_URL || "https://driverpulse-backend.onrender.com/api/v1"}/upload`,
         { method: "POST", body: form }
       );
       if (!res.ok) {
@@ -85,7 +85,7 @@ export function CSVUploadPanel({ onSuccess }: CSVUploadPanelProps) {
     setResult(null);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1"}/upload/sample`,
+        `${process.env.NEXT_PUBLIC_API_URL || "https://driverpulse-backend.onrender.com/api/v1"}/upload/sample`,
         { method: "POST" }
       );
       if (!res.ok) {
