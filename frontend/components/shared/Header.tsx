@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Github } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
@@ -37,7 +38,16 @@ export function Header() {
               </Link>
             );
           })}
-          <div className="pl-4 border-l border-gray-200 dark:border-gray-800">
+          <div className="pl-4 border-l border-gray-200 dark:border-gray-800 flex items-center gap-4">
+            <a
+              href="https://github.com/eshikanahata/Driver-Pulse"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+              title="View Source on GitHub"
+            >
+              <Github className="w-5 h-5" />
+            </a>
             <ThemeToggle />
           </div>
         </nav>
